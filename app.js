@@ -2,11 +2,8 @@ const { Socket } = require("dgram")
 const express = require("express")
 const app = express()
 
-const http = require('http').createServer(app)
-const PORT=process.env.PORT||3000
-http.listen(PORT,()=>{
-    console.log(`use ${PORT}`)
-})
+const PORT=5000
+
 
 app.use(express.static(__dirname+'/public'))
 app.get('/',(req,res)=>{
@@ -23,3 +20,5 @@ io.on('connection',(socket)=>{
         socket.broadcast.emit('message',msg)
     })
 })
+
+app.listen(process.evn.PORT || port,()=>console.log(`getting the port ${port}`))
