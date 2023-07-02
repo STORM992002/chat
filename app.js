@@ -4,6 +4,7 @@ const app = express()
 
 const PORT=5000
 
+const http = require('http').createServer(app)
 
 app.use(express.static(__dirname+'/public'))
 app.get('/',(req,res)=>{
