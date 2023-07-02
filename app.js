@@ -2,7 +2,7 @@ const { Socket } = require("dgram")
 const express = require("express")
 const app = express()
 
-const PORT=5000
+const port=5000
 
 const http = require('http').createServer(app)
 
