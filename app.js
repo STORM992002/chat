@@ -22,4 +22,4 @@ io.on('connection',(socket)=>{
     })
 })
 
-app.listen(process.evn.PORT || port,()=>console.log(`getting the port ${port}`))
+app.listen(process.env.PORT || port, () => console.log(`Listening on port ${port}`))
